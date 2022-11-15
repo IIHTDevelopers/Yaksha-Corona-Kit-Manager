@@ -49,7 +49,7 @@ public class TestAdminController {
     @Before
     public void setUp() {
         this.servlet = new AdminController();
-        productMasterDao = new ProductMasterDao(jdbcURL, jdbcUsername, jdbcPassword);
+        productMasterDao = new ProductMasterDao("jdbc:mysql://localhost/coronakit", "root", "pass@word1");
         this.servlet.setProductMasterDao(productMasterDao);
         MockitoAnnotations.initMocks(this);
     }
