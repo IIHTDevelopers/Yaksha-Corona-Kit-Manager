@@ -47,9 +47,9 @@ public class TestUserController {
     @Before
     public void setUp() {
         this.servlet = new UserController();
-        productMasterDao = new ProductMasterDao(jdbcURL, jdbcUsername, jdbcPassword);
+        productMasterDao = new ProductMasterDao("jdbc:mysql://localhost/coronakit", "root", "pass@word1");
         this.servlet.setProductMasterDao(productMasterDao);
-        kitDao = new KitDao(jdbcURL, jdbcUsername, jdbcPassword);
+        kitDao = new KitDao("jdbc:mysql://localhost/coronakit", "root", "pass@word1");
         this.servlet.setKitDAO(kitDao);
         MockitoAnnotations.initMocks(this);
     }
