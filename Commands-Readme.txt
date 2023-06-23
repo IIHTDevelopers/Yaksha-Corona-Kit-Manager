@@ -1,5 +1,5 @@
-* To build your project and run test cases use command:
-	mvn clean package
+* To build your project use command:
+	mvn clean package -Dmaven.test.skip
 
 * To launch your application, run the following command to run the application:
 	java -jar target/dependency/webapp-runner.jar target/coronokit.war --port 8081
